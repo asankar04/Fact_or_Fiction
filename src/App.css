@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --mainlight: white;
+  --maindark: rgb(18, 23, 36);
+  --maindarkgreen: rgb(170, 222, 170);
+  --maingreen: rgb(2, 198, 2);
+  --maintextbg: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  color: var(--mainlight);
+  background: var(--maindark);
+  min-height: 100vh;
+  background-repeat: no-repeat;    
+  background-size: cover;
+}
+
+.title {
+  align-items: center;
+  text-align: center;
+  background-color: var(--maindark);
+  margin-bottom: 0;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  background-color: var(--mainlight);
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  height: 0.3rem;
+  z-index: 10;
+}
+
+.title_text {
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.prompt {
+  background-color: var(--maindark);
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6rem;
+  text-align: center;
+  background-color: var(--maindark);
+}
+
+.choices button {
+  font-size: 3rem;
+  padding: 1rem;
+  width: 12rem;
+  height: 6rem;
+  border-radius: 0.6rem;
+  transition: font-size 0.3s ease;
+}
+
+.choices button:hover {
+  font-size: 2.75rem;
+  cursor: pointer;
+}
+
+
+.score {
+  text-align: center;
+  padding: 3rem;
+  font-size: 4rem;
+  background-color: var(--maindark);
+}
