@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #24312c;
+  background-color: #f8f9f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at 85% 8%, #e8f0eb, transparent 34%), #f8f9f6;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #7fa79a;
+  outline-offset: 3px;
+}
+
+.page {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 96px 0 48px;
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 14px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+header h1 span {
+  color: #749489;
+  font-style: italic;
+}
+
+header p {
+  margin: 0;
+  color: #69766e;
+  line-height: 1.6;
+}
+
+.card {
+  padding: 32px;
+  border: 1px solid #e6ebe5;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 20px 55px rgba(44, 67, 55, 0.07);
+  text-align: center;
+}
+
+.score {
+  margin: 0;
+  color: #4f7062;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.statement {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  margin: 0;
+  padding: 28px 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.55rem, 4vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.choices button {
+  min-height: 56px;
+  border: 1px solid #dfe8e1;
+  border-radius: 12px;
+  background-color: #f0f5f1;
+  color: #365b49;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.choices button:hover:not(:disabled) {
+  background-color: #e2eee5;
+}
+
+.choices button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.message {
+  margin-top: 24px;
+}
+
+.message p {
+  margin: 0 0 14px;
+  color: #4f7062;
+  font-weight: 600;
+}
+
+.message button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 9px;
+  background-color: #527663;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.message button:hover {
+  background-color: #3f614f;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding-top: 60px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+}
